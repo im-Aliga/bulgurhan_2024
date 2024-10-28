@@ -1,0 +1,173 @@
+﻿@using QRMenu.Areas.Client.ViewCompanents;
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="~/Client/images/favicon.png" type="">
+
+    <title> Mixek Tea House </title>
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="~/Client/css/bootstrap.css" />
+
+    <!--owl slider stylesheet -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <!-- nice select  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+    <!-- font awesome style -->
+    <link href="~/Client/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="~/Client/css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="~/Client/css/responsive.css" rel="stylesheet" />
+
+</head>
+
+<body class="sub_page">
+
+
+    <!-- food section -->
+
+    <section class="food_section mainnn layout_padding">
+        <div class="container">
+
+            <div class="heading_container heading_center">
+                <img src="~/Client/images/Mixek Logo blue.png" alt="Mixek Logo" width="350" height="350">
+                <h2>
+                   
+                   Menu
+                </h2>
+            </div>
+
+            <a asp-route="admin-product-list"> Admin Panel</a>
+
+
+            @await Component.InvokeAsync(nameof(Categorys))
+
+            <div class="filters-content">
+                <div class="row grid">
+                    @RenderBody()
+
+                </div>
+            </div>
+           
+
+
+        </div>
+    </section>
+
+    <!-- end food section -->
+    <!-- footer section -->
+    <footer class="footer_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-col">
+                    <div class="footer_contact">
+                        <h4>
+                            Bizimlə Əlaqə
+                        </h4>
+                        <div class="contact_link_box">
+                            <a href="https://maps.app.goo.gl/QAwT2ABhCHf1VuFA9">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <span>
+                                    Yeni Yasamal / Əsəd Əhmədov 22A
+                                </span>
+                            </a>
+                            <p >
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <span>
+                                    +994 55 578 88 04 <br/>
+                                        012 404 88 04
+                                </span>
+                            </p>
+                            <a href="https://www.instagram.com/mixek_teahouse/">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                <span>
+                                    Mixek_teahouse
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 footer-col">
+                    <div class="footer_detail">
+                        <p href="" class="footer-logo">
+                            Haqqımızda
+                        </p>
+                        <p>
+                            İnteryerimizdən də bəlli olduğu kimi biz “Mixək Tea House” komandası olaraq,<br /> 
+                            komfortlu və eleqant bir mühit yaratmağa önəm vermişik!<br />
+                            Əmin olun ki bu prinsip heç vaxt dəyişməyəcək və sizlərin gözəl
+                            bir atmosferdə istirahət etməyini hər zaman təmin edəcəyik.
+                        </p>
+                        <div class="footer_social">
+                            <a href="https://www.facebook.com/mixek.teahouse?mibextid=LQQJ4d">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                         
+                            <a href="https://www.instagram.com/mixek_teahouse/">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a href="http://wa.me/994555788804?text">
+                                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 footer-col">
+                    <h4>
+                        İş Saatları
+                    </h4>
+                    <p>
+                        Hər Gün
+                    </p>
+                    <p>
+                        12:30  -  02:00
+                    </p>
+                </div>
+            </div>
+            <div class="footer-info">
+                <p>
+                    &copy; <span id="displayYear"></span> All Rights Reserved By
+                    <a href="https://html.design/">Mixek Tea House</a><br><br>
+                    &copy; <span id="displayYear"></span> Distributed By
+                    <a href="https://www.linkedin.com/in/kamil-t-mammadov/" target="_blank">Kamil Mammadov</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section -->
+    <!-- jQery -->
+    <script src="~/Client/js/jquery-3.4.1.min.js"></script>
+    <!-- popper js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <!-- bootstrap js -->
+    <script src="~/Client/js/bootstrap.js"></script>
+    <!-- owl slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+    </script>
+    <!-- isotope js -->
+    <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
+    <!-- nice select -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+    <!-- custom js -->
+    <script src="~/Client/js/custom.js"></script>
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+    </script>
+    <!-- End Google Map -->
+
+</body>
+
+</html>

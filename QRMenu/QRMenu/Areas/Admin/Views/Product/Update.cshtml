@@ -1,0 +1,22 @@
+﻿@using QRMenu.Database.Models
+@model Product
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+
+<form method="POST" asp-route="admin-product-update">
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Adı</label>
+        <input class="form-control" id="exampleFormControlInput1" asp-for="@Model.Name">
+
+        <label for="exampleFormControlInput1">Ətraflı Məlumat:</label>
+        <input class="form-control" id="exampleFormControlInput1" asp-for="@Model.Description">
+
+        <label for="exampleFormControlInput1">Qiymət:</label>
+        <input class="form-control" id="exampleFormControlInput1" asp-for="@Model.Price">
+
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Tesdiqle</button>
+</form>

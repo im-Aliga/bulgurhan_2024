@@ -1,0 +1,26 @@
+﻿@using QRMenu.Areas.Admin.ViewModels;
+@model List<CategoryViewModel>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<a asp-route="admin-cate-add" class="btn btn-primary mt-5 mb-5">Yeni Kateqoriya Əlavə et</a>
+
+<div class="display-flex">
+    <div class="row">
+        @foreach (var product in Model)
+        {
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">@product.Name</h5>
+                </div>
+                <div>
+                    <form method="POST" asp-route="admin-cate-delete" asp-route-id="@product.Id" id="blog-form-@product.Id"></form>
+                    <button style="width:100%;" class="btn btn-danger" type="submit" form="blog-form-@product.Id">
+                        sil
+                    </button>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>
+

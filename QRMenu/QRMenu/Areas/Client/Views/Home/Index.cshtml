@@ -1,0 +1,37 @@
+﻿@using QRMenu.Areas.Client.ViewModels
+@model List<ProductViewModel>
+
+
+    @foreach (var product in Model)
+{
+    @foreach (var category in product.Category)
+    
+    {
+        <div class="col-sm-6 col-lg-4 all @category.Name">
+            <div class="box">
+                <div>
+                    <div class="img-box">
+                        <img width="100%" src="~/@product.FileNameInSystem" alt="">
+                    </div>
+                    <div class="detail-box">
+                        <h5>
+                            @product.Name
+                        </h5>
+                        <p>
+                            @product.Description
+                        </p>
+                        <div class="options">
+                            <h6>
+                                @product.Price Azn
+                            </h6>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    
+}
+
+
